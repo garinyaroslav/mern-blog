@@ -21,13 +21,13 @@ export const Header: React.FC = () => {
     <div className={styles.root}>
       <Container maxWidth="lg">
         <div className={styles.inner}>
-          <Link to="/mern-blog" className={styles.logo}>
+          <Link to="/" className={styles.logo}>
             <span>MERN-BLOG</span>
           </Link>
           <div className={styles.buttons}>
             {isAuth ? (
               <>
-                <Link to="/mern-blog/add-post">
+                <Link to="/add-post">
                   <Button variant="contained">Написать статью</Button>
                 </Link>
                 <Button onClick={onClickLogout} variant="contained" color="error">
@@ -36,10 +36,10 @@ export const Header: React.FC = () => {
               </>
             ) : (
               <>
-                <Link to="/mern-blog/login">
+                <Link to="/login">
                   <Button variant="outlined">Войти</Button>
                 </Link>
-                <Link to="/mern-blog/register">
+                <Link to="/register">
                   <Button variant="contained">Создать аккаунт</Button>
                 </Link>
               </>

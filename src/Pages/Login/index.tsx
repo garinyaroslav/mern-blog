@@ -36,7 +36,7 @@ export const Login: React.FC = () => {
     }
   };
 
-  if (isAuth) return <Navigate to="/mern-blog" />;
+  if (isAuth) return <Navigate to="/" />;
 
   return (
     <Paper classes={{ root: styles.root }}>

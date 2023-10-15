@@ -22,7 +22,7 @@ export const TagsBlock: React.FC<TagsBlockProps> = ({ items, isLoading = true })
   const navigate = useNavigate();
 
   const onClickTag = (name: string) => {
-    navigate(`/mern-blog/tags/${name}`);
+    navigate(`/tags/${name}`);
   };
 
   return (

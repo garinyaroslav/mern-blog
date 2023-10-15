@@ -53,7 +53,7 @@ export const AddPost: React.FC = () => {
   };
 
   const onClickCancel = async () => {
-    navigate('/mern-blog');
+    navigate('/');
   };
 
   const onChange = React.useCallback((value: string) => {
@@ -73,7 +73,7 @@ export const AddPost: React.FC = () => {
         ? await axios.patch(`/posts/${id}`, fields)
         : await axios.post('/posts', fields);
       const _id = isEditing ? id : data._id;
-      navigate(`/mern-blog/posts/${_id}`);
+      navigate(`/posts/${_id}`);
     } catch (err) {
       console.error(err);
       alert('Ошибка при создании статьи!');
@@ -114,7 +114,7 @@ export const AddPost: React.FC = () => {
     [],
   );
 
-  if (!window.localStorage.getItem('token') && !isAuth) return <Navigate to="/mern-blog" />;
+  if (!window.localStorage.getItem('token') && !isAuth) return <Navigate to="/" />;
 
   return (
     <Paper style={{ padding: 30 }}>
