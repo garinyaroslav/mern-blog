@@ -31,7 +31,7 @@ export const Home: React.FC = () => {
       const { data } = await axios.get('/comments');
       setComments(data);
     })();
-  }, [comments]);
+  }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue);
