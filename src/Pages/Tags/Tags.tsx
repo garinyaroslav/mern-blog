@@ -36,7 +36,7 @@ export const Tags: React.FC = () => {
             key={index}
             id={item._id}
             title={item.title}
-            imageUrl={item.imageUrl ? `http://localhost:4444${item.imageUrl}` : ''}
+            imageUrl={item.imageUrl ? `${process.env.REACT_APP_API_URL}${item.imageUrl}` : ''}
             user={{
               avatarUrl: item.user?.avatarUrl,
               fullName: item.user?.fullName,
