@@ -76,7 +76,7 @@ export const FullPost: React.FC = () => {
           console.error(err);
         });
     })();
-  }, []);
+  }, [data._id]);
 
   if (isLoading) {
     return <Post isLoading={isLoading} isFullPost />;
