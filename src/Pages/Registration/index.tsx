@@ -18,9 +18,9 @@ export const Registration: React.FC = () => {
     formState: { errors, isValid },
   } = useForm({
     defaultValues: {
-      fullName: 'Вася Пупкин',
-      email: 'vasya@test.ru',
-      password: '1234',
+      fullName: '',
+      email: '',
+      password: '',
     },
     mode: 'onChange',
   });
