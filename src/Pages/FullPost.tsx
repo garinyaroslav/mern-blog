@@ -76,7 +76,7 @@ export const FullPost: React.FC = () => {
           console.error(err);
         });
     })();
-  }, [comments]);
+  }, []);
 
   if (isLoading) {
     return <Post isLoading={isLoading} isFullPost />;
@@ -87,7 +87,8 @@ export const FullPost: React.FC = () => {
       <Post
         id={data._id}
         title={data.title}
-        imageUrl={data.imageUrl ? `${process.env.REACT_APP_API_URL}${data.imageUrl}` : ''}
+        // imageUrl={data.imageUrl ? `${process.env.REACT_APP_API_URL}${data.imageUrl}` : ''}
+        imageUrl={data.imageUrl ? data.imageUrl : ''}
         user={{
           avatarUrl: data.user.avatarUrl,
           fullName: data.user.fullName,
